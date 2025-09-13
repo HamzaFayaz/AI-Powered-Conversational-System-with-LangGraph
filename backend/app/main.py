@@ -26,8 +26,9 @@ app.add_middleware(
 app.include_router(health_router, prefix="/health", tags=["health"])
 app.include_router(api_router, prefix="/api", tags=["chat"])
 
-@app.get("/")
+@app.get("/checking")
 async def root():
     return {"message": "AI Chatbot API is running"}
+
 
 app.mount("/", StaticFiles(directory="static", html=True), name="frontend")
