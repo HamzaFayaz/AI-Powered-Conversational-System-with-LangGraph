@@ -1,4 +1,4 @@
-# Agentic_Chatbot
+# AI-Powered Conversational System with LangGraph
 <div align="center">
 
 ![LangGraph](https://img.shields.io/badge/LangGraph-FF6B6B?style=for-the-badge&logo=python&logoColor=white)
