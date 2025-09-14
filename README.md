@@ -38,8 +38,8 @@ Here are some snapshots that highlight the system in action:
 
 ### 💬 Chatbot Demo  
 Showcasing real-time interaction with the AI-powered conversational system.  
-<img width="1850" height="961" alt="chatbot_1" src="https://github.com/user-attachments/assets/8e06bc06-c1ff-4440-88b0-cfd1d6e33434" />
-<img width="1121" height="713" alt="chatbot_2" src="https://github.com/user-attachments/assets/1866612a-9ccb-4fcf-9e97-3473d6c67832" />
+<img width="650" height="961" alt="chatbot_1" src="https://github.com/user-attachments/assets/8e06bc06-c1ff-4440-88b0-cfd1d6e33434" />
+<img width="650" height="713" alt="chatbot_2" src="https://github.com/user-attachments/assets/1866612a-9ccb-4fcf-9e97-3473d6c67832" />
 
 
 
@@ -54,7 +54,8 @@ CI/CD pipeline success message from the **EC2 instance terminal**.
 
 ### 🔄 GitHub Actions Workflow  
 Successful **workflow run** demonstrating automated CI/CD.  
-<img width="1818" height="802" alt="cicd running" src="https://github.com/user-attachments/assets/89931ff3-86f4-44bb-9345-fd7133f0809d" />
+
+<img width="1746" height="712" alt="cicd running" src="https://github.com/user-attachments/assets/fd462323-ecc1-4eab-ae38-054742a84a05" />
 
 
 ---
