@@ -139,7 +139,7 @@ chatbot-project/
 │   ├── package-lock.json        # Dependency lock file
 │   └── tailwind.config.js       # Tailwind CSS config
 │
-├── docker-compose.yml           # Compose for fullstack deployment
+├── workflow.yml           # Compose for fullstack deployment
 ├── .dockerignore                # Files ignored by Docker
 └── README.md                    # Project documentation
 ```
