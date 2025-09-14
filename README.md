@@ -38,32 +38,24 @@ Here are some snapshots that highlight the system in action:
 
 ### 💬 Chatbot Demo  
 Showcasing real-time interaction with the AI-powered conversational system.  
+<img width="1850" height="961" alt="chatbot_1" src="https://github.com/user-attachments/assets/8e06bc06-c1ff-4440-88b0-cfd1d6e33434" />
+<img width="1121" height="713" alt="chatbot_2" src="https://github.com/user-attachments/assets/1866612a-9ccb-4fcf-9e97-3473d6c67832" />
 
-<p align="center">
-  <img src="assets/chatbot-demo-1.png" alt="Chatbot Demo - Example 1" width="600"/>
-</p>
 
-<p align="center">
-  <img src="assets/chatbot-demo-2.png" alt="Chatbot Demo - Example 2" width="600"/>
-</p>
 
 ---
 
 ### ☁️ AWS EC2 Deployment  
 CI/CD pipeline success message from the **EC2 instance terminal**.  
 
-<p align="center">
-  <img src="assets/aws-ec2-deployment.png" alt="AWS EC2 Deployment Success" width="600"/>
-</p>
+<img width="1527" height="696" alt="Runner aws" src="https://github.com/user-attachments/assets/00d84f1c-ef9d-405a-b451-75bcd6ac779b" />
 
 ---
 
 ### 🔄 GitHub Actions Workflow  
 Successful **workflow run** demonstrating automated CI/CD.  
+<img width="1818" height="802" alt="cicd running" src="https://github.com/user-attachments/assets/89931ff3-86f4-44bb-9345-fd7133f0809d" />
 
-<p align="center">
-  <img src="assets/github-actions-success.png" alt="GitHub Actions Workflow Success" width="600"/>
-</p>
 
 ---
 
