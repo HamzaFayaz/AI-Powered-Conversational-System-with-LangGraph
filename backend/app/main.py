@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 
 # Serve React build (so frontend available at "/")
 
-   
+
 app = FastAPI(
     title="AI Chatbot API",
     description="FastAPI backend for AI chatbot with file upload and RAG capabilities",
@@ -32,4 +32,5 @@ async def root():
 
 
 app.mount("/", StaticFiles(directory="static", html=True), name="frontend")
+
 
