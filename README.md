@@ -12,24 +12,61 @@
 
 </div>
 
-## 📋 About This Project
+---
 
-An advanced AI-powered conversational system built with modular architecture for scalability, maintainability, and clarity. The project leverages LLMs orchestrated through LangGraph for structured reasoning, while maintaining a professional ingestion workflow to handle document uploads and populate a vector database for accurate retrieval.  
+## 📋 **About This Project**
 
-### What Makes It Special:
+An advanced **AI-powered conversational system** built with modular architecture for scalability, maintainability, and clarity. The project leverages **LLMs orchestrated through LangGraph** for structured reasoning, while maintaining a professional ingestion workflow to handle document uploads and populate a vector database for accurate retrieval.  
+
+### **What Makes It Special:**
 - 🧠 **Agent-Centric Design**: Agents are fully separated from prompts, nodes, and graph logic for clean reasoning flow.  
 - 📂 **Structured Ingestion**: Dedicated ingestion pipeline for loading, chunking, and embedding documents into the vector database.  
 - 🔎 **Powerful Retrieval**: Optimized vector search ensures precise context recall for user queries.  
 - 🪄 **Modular Workflow**: Clear split between core logic (agents, nodes, graph) and shared helpers (utils, config) for easy scaling.  
 - 📊 **Transparent Orchestration**: LangGraph-based graph definition provides visibility and control over multi-step reasoning.  
 - ⚡ **Seamless Integration**: Built-in support for FAISS/Pinecone and other vector DBs for flexible deployment.  
+- 🐳 **Unified Dockerization**: Frontend (React) and Backend (FastAPI) fully containerized and deployed together.  
+- 🔄 **Automated CI/CD Pipeline**: Continuous integration and delivery for seamless testing, building, and deployment.  
+- ☁️ **Cloud Ready**: Supports deployment on **AWS EC2** with container images stored in **Amazon ECR** for production scalability.  
+- 💻 **Local Friendly**: Runs smoothly on local machines or Codespaces with Docker Compose if AWS is not required.  
 
 ---
 
-## 📊 **System Overview**
-<img width="492" height="432" alt="System_Architecture" src="https://github.com/user-attachments/assets/129a811b-af7d-4352-bfa9-ff8e27e5504a" />
+## 📸 **Demo & Screenshots**
+
+Here are some snapshots that highlight the system in action:  
+
+### 💬 Chatbot Demo  
+Showcasing real-time interaction with the AI-powered conversational system.  
+
+<p align="center">
+  <img src="assets/chatbot-demo-1.png" alt="Chatbot Demo - Example 1" width="600"/>
+</p>
+
+<p align="center">
+  <img src="assets/chatbot-demo-2.png" alt="Chatbot Demo - Example 2" width="600"/>
+</p>
 
 ---
+
+### ☁️ AWS EC2 Deployment  
+CI/CD pipeline success message from the **EC2 instance terminal**.  
+
+<p align="center">
+  <img src="assets/aws-ec2-deployment.png" alt="AWS EC2 Deployment Success" width="600"/>
+</p>
+
+---
+
+### 🔄 GitHub Actions Workflow  
+Successful **workflow run** demonstrating automated CI/CD.  
+
+<p align="center">
+  <img src="assets/github-actions-success.png" alt="GitHub Actions Workflow Success" width="600"/>
+</p>
+
+---
+
 ## 🚀 Key Features
 
 ### Core Functionality
@@ -59,3 +96,130 @@ An advanced AI-powered conversational system built with modular architecture for
 - 🐳 **Docker Support**: Ready for containerized deployment and scaling.  
 
 ---
+## 🏗️ **System Architecture**
+
+```text
+┌─────────────────┐    ┌─────────────────┐    ┌───────────────────────┐
+│   Frontend      │    │   Backend       │    │     AI Services       │
+│   (React)       │◄──►│ (FastAPI +      │◄──►│   (LangGraph + LLMs)  │
+│                 │    │   LangGraph)    │    │                       │
+│ • Chatbot UI    │    │ • API Gateway   │    │ • Agents & Graph Flow │
+│ • File Upload   │    │ • Ingestion     │    │ • Retrieval + RAG     │
+│ • Live Updates  │    │ • Vector Store  │    │ • Document Embedding  │
+│ • Reports       │    │ • CI/CD Hooks   │    │ • AWS EC2 + ECR       │
+└─────────────────┘    └─────────────────┘    └───────────────────────┘
+
+```
+
+---
+
+## 📁 **Project Structure**
+
+The project follows a clean and modular structure for clarity and scalability.  
+
+```text
+chatbot-project/
+├── backend/                     # FastAPI backend
+│   ├── app/
+│   │   ├── agents/              # AI agents
+│   │   ├── api/                 # API routes
+│   │   ├── core/                # Core logic (entrypoints)
+│   │   ├── graph/               # LangGraph workflows
+│   │   ├── ingestion/           # Document ingestion pipeline
+│   │   ├── models/              # ML/LLM models
+│   │   ├── prompts/             # LLM prompts
+│   │   ├── tools/               # Helper tools
+│   │   ├── __init__.py          # Package init
+│   │   └── main.py              # FastAPI app entrypoint
+│   ├── run.py                   # Run script
+│   ├── requirements.txt         # Python dependencies
+│   ├── .env                     # Environment variables
+│   └── Dockerfile               # Backend Docker configuration
+│
+├── frontend/                    # React frontend
+│   ├── public/                  # Static assets
+│   ├── src/                     # Frontend source code
+│   │   ├── components/          # React components
+│   │   ├── services/            # API services
+│   │   └── utils/               # Frontend utilities
+│   ├── package.json             # Node.js dependencies
+│   ├── package-lock.json        # Dependency lock file
+│   └── tailwind.config.js       # Tailwind CSS config
+│
+├── docker-compose.yml           # Compose for fullstack deployment
+├── .dockerignore                # Files ignored by Docker
+└── README.md                    # Project documentation
+```
+
+## 🛠️ Technology Stack  
+
+### Backend  
+- **FastAPI**: Modern Python web framework for building APIs  
+- **Uvicorn**: Lightning-fast ASGI server for running FastAPI  
+- **Docker**: Containerization for consistent deployments  
+- **AWS EC2**: Hosting the backend on a scalable cloud VM  
+- **AWS ECR** *(optional)*: Private container registry for storing Docker images  
+
+### Frontend  
+- **React 18**: UI framework for building responsive frontend  
+- **Tailwind CSS**: Utility-first CSS framework for styling  
+- **Framer Motion**: Animation library for smooth UI interactions  
+- **React Hook Form**: Form handling and validation  
+- **React Dropzone**: File upload functionality  
+- **Headless UI**: Accessible, unstyled components  
+
+### AI/ML  
+- **Sentence Transformers**: Text embeddings for semantic similarity  
+- **FAISS**: Vector similarity search for efficient retrieval  
+- **LangChain**: LLM orchestration and RAG pipeline management  
+
+### DevOps / CI/CD  
+- **GitHub Actions**: Automating CI/CD workflows  
+- **Docker**: Containerized builds for portability  
+- **AWS EC2**: Deployment target for CI/CD pipeline  
+---
+
+## 🚀 Quick Start
+
+Get the project running locally in just a few steps:  
+
+```bash
+# 1️⃣ Clone the Repository
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+# 2️⃣ Backend Setup (FastAPI)
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+
+pip install -r requirements.txt
+
+# Run the backend server
+python run.py
+# 👉 Backend available at http://127.0.0.1:8000
+
+# 3️⃣ Frontend Setup (React)
+cd frontend
+npm install
+npm start
+# 👉 Frontend available at http://localhost:3000
+
+# 4️⃣ Run with Docker (Optional)
+# From the project root
+docker build -t agentic-chatbot:latest .
+docker run -d -p 8000:8000 --env-file backend/.env agentic-chatbot:latest
+
+# 5️⃣ Deploy to AWS EC2 (Optional)
+# Copy files to EC2 instance
+scp -r . ubuntu@your-ec2-ip:/home/ubuntu/agentic-chatbot
+
+# SSH into EC2
+ssh ubuntu@your-ec2-ip
+
+# Inside EC2 instance
+cd agentic-chatbot
+docker build -t agentic-chatbot:latest .
+docker run -d -p 8000:8000 --env-file backend/.env agentic-chatbot:latest
+```
+
